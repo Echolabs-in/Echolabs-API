@@ -26,7 +26,7 @@ function getTransport() {
 async function sendInquiryEmail(inquiry) {
   const to = process.env.INQUIRY_TO_EMAIL;
   const from = process.env.MAIL_FROM || process.env.SMTP_USER;
-  const subjectPrefix = process.env.INQUIRY_SUBJECT_PREFIX || "[Website Inquiry]";
+  const subjectPrefix = process.env.INQUIRY_SUBJECT_PREFIX || "[New Inquiry]";
 
   if (!to) {
     const err = new Error("INQUIRY_TO_EMAIL is not set.");
