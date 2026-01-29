@@ -5,7 +5,13 @@ const cors = require("cors");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
 
-dotenv.config({ path: path.join(process.cwd(), ".env") });
+// Load .env file only if it exists (for local development)
+// In Netlify, environment variables are automatically available
+try {
+  dotenv.config({ path: path.join(process.cwd(), ".env") });
+} catch (err) {
+  // Ignore if .env doesn't exist (e.g., in Netlify)
+}
 
 const { inquiryRouter } = require("./routes/inquiry");
 

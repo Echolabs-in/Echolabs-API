@@ -32,17 +32,17 @@
 
 4. **Set Environment Variables**:
    - Go to Site Settings → Environment Variables
-   - Add each variable from your `.env` file:
-     ```
-     SMTP_HOST=smtp.gmail.com
-     SMTP_PORT=587
-     SMTP_SECURE=false
-     SMTP_USER=adityaraj9843@gmail.com
-     SMTP_PASS=ldic xcxg iwng gltq
-     MAIL_FROM=Echolabs Website <adityaraj9843@gmail.com>
-     INQUIRY_TO_EMAIL=adityaraj9843@gmail.com
-     INQUIRY_SUBJECT_PREFIX=[Website Inquiry]
-     ALLOWED_ORIGINS=*
+   - Add each variable from your `.env` file (use your **own** values, do **not** commit secrets):
+     ```bash
+     SMTP_HOST=<your_smtp_host>          # e.g. smtp.gmail.com
+     SMTP_PORT=<your_smtp_port>          # e.g. 587
+     SMTP_SECURE=<true_or_false>         # e.g. false
+     SMTP_USER=<your_smtp_username>      # e.g. your Gmail address
+     SMTP_PASS=<your_smtp_app_password>  # keep secret; do NOT store in git
+     MAIL_FROM="<Your Name> <no-reply@yourdomain.com>"
+     INQUIRY_TO_EMAIL=<where_to_receive_inquiries>
+     INQUIRY_SUBJECT_PREFIX="[Website Inquiry]"
+     ALLOWED_ORIGINS="*"
      ```
 
 5. **Deploy**:
@@ -67,13 +67,13 @@
 
 3. **Set Environment Variables**:
    ```bash
-   netlify env:set SMTP_HOST "smtp.gmail.com"
-   netlify env:set SMTP_PORT "587"
-   netlify env:set SMTP_SECURE "false"
-   netlify env:set SMTP_USER "adityaraj9843@gmail.com"
-   netlify env:set SMTP_PASS "ldic xcxg iwng gltq"
-   netlify env:set MAIL_FROM "Echolabs Website <adityaraj9843@gmail.com>"
-   netlify env:set INQUIRY_TO_EMAIL "adityaraj9843@gmail.com"
+   netlify env:set SMTP_HOST "<your_smtp_host>"
+   netlify env:set SMTP_PORT "<your_smtp_port>"
+   netlify env:set SMTP_SECURE "<true_or_false>"
+   netlify env:set SMTP_USER "<your_smtp_username>"
+   netlify env:set SMTP_PASS "<your_smtp_app_password>"
+   netlify env:set MAIL_FROM "<Your Name> <no-reply@yourdomain.com>"
+   netlify env:set INQUIRY_TO_EMAIL "<where_to_receive_inquiries>"
    netlify env:set INQUIRY_SUBJECT_PREFIX "[Website Inquiry]"
    netlify env:set ALLOWED_ORIGINS "*"
    ```

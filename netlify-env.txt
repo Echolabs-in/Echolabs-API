@@ -1,0 +1,11 @@
+PORT=3000
+ALLOWED_ORIGINS=*
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=adityaraj9843@gmail.com
+SMTP_PASS=REPLACE_WITH_YOUR_NEW_APP_PASSWORD
+MAIL_FROM=Echolabs Website <adityaraj9843@gmail.com>
+INQUIRY_TO_EMAIL=adityaraj9843@gmail.com
+INQUIRY_SUBJECT_PREFIX=[Website Inquiry]
+
